@@ -28,8 +28,10 @@ ui['t9md/vim-choosewin'] = {
   config = conf.vim_choosewin
 }
 
-ui['easymotion/vim-easymotion'] = {
-  config = conf.vim_easymotion
+ui['phaazon/hop.nvim'] = {
+  event  = 'BufRead',
+  config = conf.hop,
+  branch = 'v2'
 }
 
 ui['preservim/nerdcommenter'] = {
