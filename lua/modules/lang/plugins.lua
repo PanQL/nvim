@@ -12,8 +12,12 @@ lang['nvim-treesitter/nvim-treesitter-textobjects'] = {
 }
 
 lang['lervag/vimtex'] = {
-  cmd = 'call vimtex#init()',
   config = conf.vimtex,
+}
+
+lang['L3MON4D3/LuaSnip'] = {
+  config = conf.luasnip,
+  tag = "v<CurrentMajor>.*",
 }
 
 return lang
