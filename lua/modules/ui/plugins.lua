@@ -1,9 +1,12 @@
 local ui = {}
 local conf = require('modules.ui.config')
 
-ui['glepnir/zephyr-nvim'] = {
-  config = [[vim.cmd('colorscheme zephyr')]]
+ui['EdenEast/nightfox.nvim'] = {
+  config = conf.nightfox_nvim
 }
+--ui['glepnir/zephyr-nvim'] = {
+  --config = [[vim.cmd('colorscheme zephyr')]]
+--}
 
 ui['lukas-reineke/indent-blankline.nvim'] = {
   event = 'BufRead',
@@ -28,11 +31,11 @@ ui['t9md/vim-choosewin'] = {
   config = conf.vim_choosewin
 }
 
-ui['phaazon/hop.nvim'] = {
-  event  = 'BufRead',
-  config = conf.hop,
-  branch = 'v2'
-}
+--ui['phaazon/hop.nvim'] = {
+  --event  = 'BufRead',
+  --config = conf.hop,
+  --branch = 'v2'
+--}
 
 ui['preservim/nerdcommenter'] = {
   config = conf.nerdcommenter

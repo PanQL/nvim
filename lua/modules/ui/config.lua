@@ -8,23 +8,23 @@ function config.nerd_tree()
   vim.g.NERDTreeShowLineNumbers=1
 end
 
-function config.hop()
-  require'hop'.setup()
-  local hop = require('hop')
-  local directions = require('hop.hint').HintDirection
-  vim.keymap.set('', 'f', function()
-    hop.hint_char1({ direction = directions.AFTER_CURSOR, current_line_only = true })
-  end, {remap=true})
-  vim.keymap.set('', 'F', function()
-    hop.hint_char1({ direction = directions.BEFORE_CURSOR, current_line_only = true })
-  end, {remap=true})
-  vim.keymap.set('', 't', function()
-    hop.hint_char1({ direction = directions.AFTER_CURSOR, current_line_only = true, hint_offset = -1 })
-  end, {remap=true})
-  vim.keymap.set('', 'T', function()
-    hop.hint_char1({ direction = directions.BEFORE_CURSOR, current_line_only = true, hint_offset = 1 })
-  end, {remap=true})
-end
+--function config.hop()
+  --require'hop'.setup()
+  --local hop = require('hop')
+  --local directions = require('hop.hint').HintDirection
+  --vim.keymap.set('', 'f', function()
+    --hop.hint_char1({ direction = directions.AFTER_CURSOR, current_line_only = true })
+  --end, {remap=true})
+  --vim.keymap.set('', 'F', function()
+    --hop.hint_char1({ direction = directions.BEFORE_CURSOR, current_line_only = true })
+  --end, {remap=true})
+  --vim.keymap.set('', 't', function()
+    --hop.hint_char1({ direction = directions.AFTER_CURSOR, current_line_only = true, hint_offset = -1 })
+  --end, {remap=true})
+  --vim.keymap.set('', 'T', function()
+    --hop.hint_char1({ direction = directions.BEFORE_CURSOR, current_line_only = true, hint_offset = 1 })
+  --end, {remap=true})
+--end
 
 function config.vim_choosewin()
 end
@@ -44,24 +44,6 @@ function config.gitsigns()
       topdelete = {hl ='GitGutterDeleteChange',text = '▔'},
       changedelete = {hl = 'GitGutterChange', text = '▎'},
     },
-    keymaps = {
-       -- Default keymap options
-       noremap = true,
-       buffer = true,
-
-       ['n ]g'] = { expr = true, "&diff ? ']g' : '<cmd>lua require\"gitsigns\".next_hunk()<CR>'"},
-       ['n [g'] = { expr = true, "&diff ? '[g' : '<cmd>lua require\"gitsigns\".prev_hunk()<CR>'"},
-
-       ['n <leader>hs'] = '<cmd>lua require"gitsigns".stage_hunk()<CR>',
-       ['n <leader>hu'] = '<cmd>lua require"gitsigns".undo_stage_hunk()<CR>',
-       ['n <leader>hr'] = '<cmd>lua require"gitsigns".reset_hunk()<CR>',
-       ['n <leader>hp'] = '<cmd>lua require"gitsigns".preview_hunk()<CR>',
-       ['n <leader>hb'] = '<cmd>lua require"gitsigns".blame_line()<CR>',
-
-       -- Text objects
-       ['o ih'] = ':<C-U>lua require"gitsigns".text_object()<CR>',
-       ['x ih'] = ':<C-U>lua require"gitsigns".text_object()<CR>'
-     },
   }
 end
 
@@ -122,6 +104,10 @@ function config.vim_airline()
   vim.g['airline#extensions#vista#enabled'] = 1
   vim.g['airline#extensions#branch#enabled'] = 1
   vim.g['airline#extensions#syntastic#enabled'] = 1
+end
+
+function config.nightfox_nvim()
+  --vim.cmd('colorscheme nightfox')
 end
 
 return config
